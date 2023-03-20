@@ -1,0 +1,10 @@
+.create-pokemon-form {
+    background-color: white;
+
+    width: 300px;
+
+    margin: 2.5rem auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.20);
+    padding: 2rem 2.5rem;
+}
