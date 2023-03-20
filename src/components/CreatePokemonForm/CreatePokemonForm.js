@@ -1,3 +1,4 @@
+import ComboBox from "../ComboBox/ComboBox";
 import Input from "../Input/Input";
 import "./CreatePokemonForm.css";
 
@@ -11,6 +12,10 @@ const CreatePokemonForm = () => {
             <Input backgroundColor="#F2F3FF" boxShadowColor="rgba(65, 72, 255, 0.6)" classes="input--subsection" label="DEF" />
             
             <Input backgroundColor="#FFEAFD" boxShadowColor="rgba(206, 65, 255, 0.6)" label="URL" />
+
+            <ComboBox />
+
+            <input className="create-pokemon-form__submit-button" type="submit" value="Save Pokemon" />
         </form>
     )
 };
