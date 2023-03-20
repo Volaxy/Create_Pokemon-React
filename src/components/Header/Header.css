@@ -1,0 +1,11 @@
+.header {
+    background-image: linear-gradient(#2871FF, #002865);
+
+    height: 300px;
+
+    position: relative;
+
+    border-bottom: 3px solid black;
+
+    overflow: hidden;
+}
