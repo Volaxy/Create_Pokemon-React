@@ -6,7 +6,7 @@ const Pokemon = () => {
             <h2 className="pokemon__title">Bulbasaur</h2>
 
             <div className="pokemon__image">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" />
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" alt="The pokemon profile" />
             </div>
 
             <section className="pokemon__attributes">

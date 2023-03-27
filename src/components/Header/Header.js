@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
     return (
         <header className="header">
-            <Pokeball />
+            <Pokeball styles={{"top": "100%", "left": "50%", "transform": "translate(-50%, -50%)"}} />
         </header>
     )
 };

@@ -1,0 +1,11 @@
+.footer {
+    background-image: linear-gradient(to top, #2871FF, #002865);
+
+    height: 300px;
+
+    position: relative;
+
+    border-top: 3px solid black;
+
+    overflow: hidden;
+}
