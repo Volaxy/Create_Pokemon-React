@@ -10,8 +10,14 @@ const CreatePokemonForm = () => {
     const [def, setDef] = useState("");
     const [url, setUrl] = useState("");
 
+    function onSavePokemon(event) {
+        event.preventDefault();
+
+        console.log({name, hp, atk, def, url});
+    }
+
     return (
-        <form className="create-pokemon-form">
+        <form className="create-pokemon-form" onSubmit={onSavePokemon}>
             <Input
                 backgroundColor="#FFFFF2"
                 boxShadowColor="rgba(255, 201, 65, 0.6)"
@@ -61,8 +67,8 @@ const CreatePokemonForm = () => {
                 placeholder="Image of the Pokemon"
             />
 
-            <ComboBox />
-
+            <ComboBox required={true} />
+            
             <input className="create-pokemon-form__submit-button" type="submit" value="Save Pokemon" />
         </form>
     )

@@ -1,0 +1,9 @@
+.pokemons-type {
+    background-color: aqua;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 2rem;
+}

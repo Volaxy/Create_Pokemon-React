@@ -1,0 +1,75 @@
+.pokemon {
+    background-color: white;
+
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+}
+
+    .pokemon__title {
+        margin: 0;
+    }
+
+    .pokemon__image {
+        max-width: 100%;
+
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+    }
+
+    .pokemon__attributes {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+        .pokemon__attributes__att {
+            width: calc(100% / 3);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .pokemon__attributes__att__name {
+                margin: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .pokemon__attributes__att__input {
+                width: 100%;
+                height: 50px;
+
+                border: none;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+                .pokemon__attributes__att__input--hp {
+                    background-color: #d1ffcd;
+
+                    box-shadow: 0px 0px 5px rgba(22, 255, 18, 0.75);
+                }
+
+                .pokemon__attributes__att__input--atk {
+                    background-color: #ffdcdc;
+
+                    box-shadow: 0px 0px 5px rgba(255, 65, 65, 0.75);
+                }
+
+                .pokemon__attributes__att__input--def {
+                    background-color: #d5d9ff;
+
+                    box-shadow: 0px 0px 5px rgba(65, 71, 255, 0.75);
+                }
