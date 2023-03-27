@@ -24,4 +24,9 @@
         font-size: 1.25rem;
 
         cursor: pointer;
+        transition: all 0.1s;
     }
+
+        .create-pokemon-form__submit-button:hover {
+            background-color: #a3cfa0;
+        }

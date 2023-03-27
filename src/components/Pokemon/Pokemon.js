@@ -1,11 +1,11 @@
 import "./Pokemon.css";
 
-const Pokemon = () => {
+const Pokemon = (props) => {
     return (
         <div className="pokemon">
             <h2 className="pokemon__title">Bulbasaur</h2>
 
-            <div className="pokemon__image">
+            <div className="pokemon__image" style={{boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}`}}>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" alt="The pokemon profile" />
             </div>
 
