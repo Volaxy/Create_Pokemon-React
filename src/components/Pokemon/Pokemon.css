@@ -54,6 +54,10 @@
                 border: none;
                 border-radius: 5px;
                 box-sizing: border-box;
+
+                color: black;
+                font-size: 24px;
+                text-align: center;
             }
 
                 .pokemon__attributes__att__input--hp {

@@ -3,17 +3,18 @@ import ComboBox from "../ComboBox/ComboBox";
 import Input from "../Input/Input";
 import "./CreatePokemonForm.css";
 
-const CreatePokemonForm = () => {
+const CreatePokemonForm = (props) => {
     const [name, setName] = useState("");
     const [hp, setHp] = useState("");
     const [atk, setAtk] = useState("");
     const [def, setDef] = useState("");
     const [url, setUrl] = useState("");
+    const [pokemonType, setPokemonType] = useState("");
 
     function onSavePokemon(event) {
         event.preventDefault();
 
-        console.log({name, hp, atk, def, url});
+        props.savePokemon({name, hp, atk, def, url, pokemonType});
     }
 
     return (
@@ -67,7 +68,10 @@ const CreatePokemonForm = () => {
                 placeholder="Image of the Pokemon"
             />
 
-            <ComboBox required={true} />
+            <ComboBox
+                required={true}
+                onChange={type => setPokemonType(type)}
+            />
             
             <input className="create-pokemon-form__submit-button" type="submit" value="Save Pokemon" />
         </form>

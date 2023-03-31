@@ -3,8 +3,11 @@ import "./PokemonType.css";
 
 const PokemonType = (props) => {
     return (
-        <div className="pokemons-type" style={{backgroundColor: props.backgroundColor}}>
-            <Pokemon pokemonBoxShadow={props.pokemonBoxShadow} />
+        props.pokemons.length > 0 && <div className="pokemons-type" style={{backgroundColor: props.backgroundColor}}>
+            <Pokemon
+                pokemonBoxShadow={props.pokemonBoxShadow}
+                pokemons={props.pokemons}
+            />
         </div>
     )
 };

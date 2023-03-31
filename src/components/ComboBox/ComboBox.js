@@ -4,7 +4,7 @@ const ComboBox = (props) => {
     return (
         <div>
             <label className="combobox__label" htmlFor="pokemon-type">Chose your pokemon type:</label>
-            <select className="inner-combobox" required={props.required}>
+            <select className="inner-combobox" required={props.required} onChange={event => props.onChange(event.target.value)}>
                 <option></option>
                 <option style={{backgroundColor: "#729f3f"}}>Bug</option>
                 <option style={{backgroundColor: "#fdb9e9"}}>Fairy</option>
