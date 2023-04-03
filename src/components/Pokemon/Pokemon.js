@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
 import "./Pokemon.css";
 
-const Pokemon = (props) => {
-    async function searchPokemonImage(name) {
-        const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
-            .then(result => result.json());
+function Pokemon(props) {
+    const [url, setUrl] = useState();
 
-        console.log(pokemon.sprites.other.dream_world.front_default);
-    
-        return pokemon.sprites.other.dream_world.front_default;
-    }
+    useEffect(() => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${props.pokemon.name.toLowerCase()}`)
+            .then(result => result.json())
+            .then(result => {
+                setUrl(result.sprites.other.dream_world.front_default);
+            })
+    }, [props.pokemon.name]);
 
     return (
         <div key={props.pokemon.name} className="pokemon">
@@ -16,8 +18,9 @@ const Pokemon = (props) => {
 
             <div className="pokemon__image" style={{ boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}` }}>
                 <img
-                    src={searchPokemonImage(props.pokemon.name)}
-                    alt="The pokemon profile" />
+                    src={url}
+                    alt="The pokemon profile"
+                />
             </div>
 
             <section className="pokemon__attributes">
