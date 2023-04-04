@@ -58,15 +58,6 @@ const CreatePokemonForm = (props) => {
                 placeholder="Defense of the Pokemon"
                 required={true}
             />
-            
-            <Input
-                backgroundColor="#FFEAFD"
-                boxShadowColor="rgba(206, 65, 255, 0.6)"
-                label="URL"
-                value={url}
-                onChange={value => setUrl(value)}
-                placeholder="Image of the Pokemon"
-            />
 
             <ComboBox
                 required={true}
