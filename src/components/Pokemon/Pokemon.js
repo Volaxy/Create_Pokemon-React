@@ -16,7 +16,7 @@ function Pokemon(props) {
         <div key={props.pokemon.name} className="pokemon">
             <h2 className="pokemon__title">{props.pokemon.name}</h2>
 
-            <div className="pokemon__image" style={{ boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}` }}>
+            <div className="pokemon__image-box" style={{ boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}` }}>
                 <img
                     src={url}
                     alt="The pokemon profile"

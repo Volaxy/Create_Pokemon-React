@@ -18,13 +18,17 @@
         margin: 0;
     }
 
-    .pokemon__image {
-        max-width: 100%;
+    .pokemon__image-box {
+        max-width: 90%;
 
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         padding: 1rem;
     }
+
+        .pokemon__image-box img {
+            width: 100%;
+        }
 
     .pokemon__attributes {
         width: 100%;

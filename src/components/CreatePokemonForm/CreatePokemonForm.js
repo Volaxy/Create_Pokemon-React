@@ -8,13 +8,12 @@ const CreatePokemonForm = (props) => {
     const [hp, setHp] = useState("");
     const [atk, setAtk] = useState("");
     const [def, setDef] = useState("");
-    const [url, setUrl] = useState("");
     const [pokemonType, setPokemonType] = useState("");
 
     function onSavePokemon(event) {
         event.preventDefault();
 
-        props.savePokemon({name, hp, atk, def, url, pokemonType});
+        props.savePokemon({name, hp, atk, def, pokemonType});
     }
 
     return (
@@ -34,18 +33,20 @@ const CreatePokemonForm = (props) => {
                 backgroundColor="#F3FFF2"
                 boxShadowColor="rgba(69, 255, 65, 0.6)"
                 label="HP"
+                type="number"
                 value={hp}
                 onChange={value => setHp(value)}
-                placeholder="Life of the Pokemon"
+                placeholder="Life"
                 required={true}
             />
             <Input
                 backgroundColor="#FFF2F2"
                 boxShadowColor="rgba(255, 65, 65, 0.6)"
                 label="ATK"
+                type="number"
                 value={atk}
                 onChange={value => setAtk(value)}
-                placeholder="Attack of the Pokemon"
+                placeholder="Attack"
                 required={true}
             />
             <Input
@@ -53,9 +54,10 @@ const CreatePokemonForm = (props) => {
                 boxShadowColor="rgba(65, 72, 255, 0.6)"
                 classes="input--subsection"
                 label="DEF"
+                type="number"
                 value={def}
                 onChange={value => setDef(value)}
-                placeholder="Defense of the Pokemon"
+                placeholder="Defense"
                 required={true}
             />
 
