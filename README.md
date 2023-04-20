@@ -21,7 +21,7 @@
   Este projeto foi construido para aplicar os conceitos básicos do React aprendidos na Alura, para isso foi criado uma Pokedex onde você digita o nome de um pokemon e o programa através de uma API, busca automaticamente a imagem do pokemon digitado.
 </p>
 
-> Importante dizer que caso o pokemon esteja com o nome incorreto ou em outra lingua que não seja o inglês, a imagem não irá carregar.
+> Importante dizer que caso o pokemon esteja com o nome incorreto ou em outra lingua que não seja o inglês, a imagem não irá carregar. E alguns pokemons não tem uma imagem
 
 <p align="justify">
   No formulário você consegue digitar os atributos do seu pokemon, e definir de que tipo ele é, e assim que criado, ele vai para a categoria no qual você definiu com um tema de cores associado ao pokemon.
