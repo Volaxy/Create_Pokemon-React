@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Pokemon.css";
+import PokemonNotFound from "./Pokemon Not Found.png";
 
 function Pokemon(props) {
     const [url, setUrl] = useState();
@@ -18,7 +19,7 @@ function Pokemon(props) {
 
             <div className="pokemon__image-box" style={{ boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}` }}>
                 <img
-                    src={url}
+                    src={url ? url : PokemonNotFound}
                     alt="The pokemon profile"
                 />
             </div>
