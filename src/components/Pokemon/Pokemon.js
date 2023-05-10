@@ -5,17 +5,20 @@ import PokemonNotFound from "./Pokemon Not Found.png";
 function Pokemon(props) {
     const [url, setUrl] = useState();
 
+    const pokemonName = props.pokemon.name.charAt(0).toUpperCase() + props.pokemon.name.slice(1);
+
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${props.pokemon.name.toLowerCase()}`)
             .then(result => result.json())
             .then(result => {
                 setUrl(result.sprites.other.dream_world.front_default);
             })
+            .catch(() => console.log("Error of Pokedex API"));
     }, [props.pokemon.name]);
 
     return (
         <div key={props.pokemon.name} className="pokemon">
-            <h2 className="pokemon__title">{props.pokemon.name}</h2>
+            <h2 className="pokemon__title">{pokemonName}</h2>
 
             <div className="pokemon__image-box" style={{ boxShadow: `0px 0px 20px ${props.pokemonBoxShadow}` }}>
                 <img
